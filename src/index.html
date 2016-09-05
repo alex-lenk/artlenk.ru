@@ -9,40 +9,41 @@
 
 </head>
 <body>
-<div class="top-panel">
-    <div class="container collapse in" id="collapseExample">
-        <div class="row">
-            <div class="logo col-md-4 col-sm-3 col-xs-12">
-                <img src="img/logo-3.png" alt="">
-            </div>
-            <nav class="col-md-8 col-sm-9 col-xs-12">
-                <div class="dt-menu-toggle">
-                    <span>Меню сайта</span>
-                    <span class="fa fa-align-justify"></span>
-                </div>
-                <ul class="menu ph-line-nav">
-                    <li class="active"><span>Главная</span></li>
-                    <li class="menu-parent">
-                        <a href="#">Услуги и цены</a>
-                        <ul class="menu-dropdown">
-                            <li><a href="#">Верстка сайтов</a></li>
-                            <li><a href="#">Дизайн сайта</a></li>
-                            <li><a href="#">Программирование</a></li>
-                            <li><a href="#">Исправление ошибок</a></li>
-                            <li><a href="#">Администрирование сайтов</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Портфолио</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
+<div class="top-panel collapse in" id="collapse-panel" aria-expanded="false">
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo-3.png" alt="">
         </div>
+        <nav>
+            <div class="dt-menu-toggle">
+                <span>Меню сайта</span>
+                <span class="fa fa-align-justify"></span>
+            </div>
+            <ul class="menu ph-line-nav">
+                <li><a href="#" class="fa fa-home" title="Главная"></a></li>
+                <li class="menu-parent">
+                    <a href="#">Услуги и цены</a>
+                    <ul class="menu-dropdown">
+                        <li><a href="#">Верстка сайтов</a></li>
+                        <li><a href="#">Дизайн сайта</a></li>
+                        <li><a href="#">Программирование</a></li>
+                        <li><a href="#">Исправление ошибок</a></li>
+                        <li><a href="#">Администрирование сайтов</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
     </div>
-    <i class="toggle fa fa-minus" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true"
-       aria-hidden="true" aria-controls="collapseExample"></i>
+</div>
+<div class="toggle" data-toggle="collapse" data-target="#collapse-panel" aria-expanded="false"
+     aria-controls="collapse-panel">
+    <span class="fa fa-minus" aria-hidden="true" title="Свернуть меню"></span>
+    <span class="fa fa-plus" aria-hidden="true" title="Раскрыть меню"></span>
 </div>
 
 <div class="container">
@@ -96,7 +97,8 @@
         <h2><a href="#">Наши работы</a></h2>
         <div id="home-portfolio" class="owl-carousel">
             <figure class="item">
-                <span data-faancybox-href="" class="fancybox-thumb" data-fancybox-group="chapter"><img src="" alt=""></span>
+                <span data-faancybox-href="" class="fancybox-thumb" data-fancybox-group="chapter"><img src=""
+                                                                                                       alt=""></span>
                 <figcaption><a href="#" target="_blank" rel="nofollow"> name</a></figcaption>
             </figure>
         </div>

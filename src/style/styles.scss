@@ -10,33 +10,56 @@ img {
 .top-panel {
   width: 100%;
   top: 0;
-  padding: 20px 0;
+  padding: 0;
   position: fixed;
   z-index: 90;
   background: #fff;
-  .toggle {
-    width: 45px;
-    height: 44px;
-    text-align: center;
-    float: right;
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    z-index: 999999;
-    background: #000000;
-    color: #ffffff;
-    border: 1px solid #fff;
-    cursor: pointer;
-    line-height: 46px;
-    transition: all 300ms linear 0s;
-    &:hover {
-      background: #ffffff;
-      color: #000000;
-      border-color: #000000;
-    }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .down-scroll {
     background: #ffffff
+  }
+}
+
+.toggle {
+  text-align: center;
+  position: fixed;
+  right: 15px;
+  top: 24px;
+  z-index: 999;
+  background: #000;
+  color: #fff;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all .2s linear;
+  &:hover {
+    background: #fff;
+    color: #000;
+    border-color: #000;
+  }
+  .fa {
+    width: 45px;
+    display: block;
+    line-height: 46px;
+    height: 44px;
+    &-plus {
+      display: none;
+    }
+  }
+  &.collapsed {
+    .fa-minus {
+      display: none
+    }
+    .fa-plus {
+      display: inline-block;
+    }
   }
 }
 
@@ -52,7 +75,7 @@ img {
     position: relative;
     text-transform: uppercase;
     ul {
-      top: 38px;
+      top: 39px;
       left: -15px;
       margin: 0;
       padding: 0;
@@ -67,10 +90,10 @@ img {
         background-color: #fff;
         display: block;
         text-transform: none;
-        box-shadow: 1px 0 0 0 rgba(0,0,0,.15) inset,-1px 0 0 0 rgba(0,0,0,.1) inset;
+        box-shadow: 1px 0 0 0 rgba(0, 0, 0, .15) inset, -1px 0 0 0 rgba(0, 0, 0, .1) inset;
         &:last-of-type {
           padding-bottom: 15px;
-          border-bottom: 3px solid #000000;
+          border-bottom: 3px solid #000;
         }
       }
     }
@@ -78,40 +101,47 @@ img {
       height: 300px;
     }
   }
-  a, span {
+  a:not(.fa-home),
+  .active:not(.fa-home) {
     padding: 10px 0;
     position: relative;
     display: inline-block;
-    margin: 0;
-    outline: none;
     color: #000;
+    font-size: 13px;
     text-decoration: none;
-    font-size: 13px
-  }
-  a {
     &:before,
     &:after {
       width: 0;
       height: 1px;
+      top: 0;
       position: absolute;
       left: 0;
       content: '';
       background-color: #000;
-      transition: 0.6s ease-in-out;
-    }
-    &:before {
-      top: 0;
-      display: none;
+      transition: 0.3s ease-in-out;
     }
     &:after {
+      top: auto;
       bottom: 0;
     }
-    &:hover:before,
-    &:hover:after {
+  }
+  .active, a:hover {
+    &:before,
+    &:after {
       width: 100%;
     }
   }
-
+  .fa-home {
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  a.fa-home:hover {
+    opacity: .7;
+  }
 }
 
 .dt-menu-toggle {
@@ -125,6 +155,12 @@ img {
   span {
     margin: 0 0 0 15px;
     float: right
+  }
+}
+
+@include to('m') {
+  .menu {
+    display: none;
   }
 }
 
