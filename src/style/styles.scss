@@ -1,0 +1,165 @@
+@import 'lib/breakpoint';
+@import 'lib/breakpoint-slicer';
+@import "partials/mixin";
+@import "partials/common";
+
+img {
+  max-width: 100%;
+}
+
+.top-panel {
+  width: 100%;
+  top: 0;
+  padding: 20px 0;
+  position: fixed;
+  z-index: 90;
+  background: #fff;
+  .toggle {
+    width: 45px;
+    height: 44px;
+    text-align: center;
+    float: right;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 999999;
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    line-height: 46px;
+    transition: all 300ms linear 0s;
+    &:hover {
+      background: #ffffff;
+      color: #000000;
+      border-color: #000000;
+    }
+  }
+  .down-scroll {
+    background: #ffffff
+  }
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  li {
+    margin: 0 0 0 15px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    text-transform: uppercase;
+    ul {
+      top: 38px;
+      left: -15px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      height: 0;
+      z-index: 1;
+      text-align: left;
+      transition: all .5s linear;
+      overflow: hidden;
+      li {
+        padding: 0 15px;
+        background-color: #fff;
+        display: block;
+        text-transform: none;
+        box-shadow: 1px 0 0 0 rgba(0,0,0,.15) inset,-1px 0 0 0 rgba(0,0,0,.1) inset;
+        &:last-of-type {
+          padding-bottom: 15px;
+          border-bottom: 3px solid #000000;
+        }
+      }
+    }
+    &:hover ul {
+      height: 300px;
+    }
+  }
+  a, span {
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    outline: none;
+    color: #000;
+    text-decoration: none;
+    font-size: 13px
+  }
+  a {
+    &:before,
+    &:after {
+      width: 0;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      content: '';
+      background-color: #000;
+      transition: 0.6s ease-in-out;
+    }
+    &:before {
+      top: 0;
+      display: none;
+    }
+    &:after {
+      bottom: 0;
+    }
+    &:hover:before,
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+}
+
+.dt-menu-toggle {
+  display: none;
+  background-color: #333234;
+  color: #fff;
+  text-align: left;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  span {
+    margin: 0 0 0 15px;
+    float: right
+  }
+}
+
+#slider {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  &:after {
+    background: url("../img/slider-bottom.png") no-repeat center center;
+    bottom: -1px;
+    content: "";
+    height: 149px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+}
+
+.black-block {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-bottom: 15px;
+  min-height: 200px;
+  span.fa {
+    color: #ffd700;
+  }
+  h4 {
+    color: #ffd700;
+  }
+}
