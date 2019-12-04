@@ -1,12 +1,8 @@
 'use strict';
 
 var gulp = require('gulp'),
-    imagemin = require('gulp-imagemin'),
-    gutil = require('gulp-util'),
-    plumber = require('gulp-plumber'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
-    pump = require('pump'),
     zip = require('gulp-zip'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -14,10 +10,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     cleanCSS = require('gulp-clean-css'),
     watch = require('gulp-watch'),
-    newer = require('gulp-newer'),
     rename = require('gulp-rename'),
     rimraf = require('rimraf'),
-    create = browserSync.create(),
     reload = browserSync.reload;
 
 
@@ -81,14 +75,6 @@ gulp.task('html:build', function () {
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений*/
 });
 
-gulp.task('img:build', function (cb) {
-    gulp.src(path.src.img) //Выберем файлы по нужному пути
-        .pipe(newer(path.build.img))
-        .pipe(imagemin())
-        .pipe(gulp.dest(path.build.img))//Выплюнем их в папку build
-        .pipe(reload({stream: true})); //И перезагрузим сервер
-});
-
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
@@ -130,8 +116,7 @@ gulp.task('build', [
     'html:build',
     'js:build',
     'style:build',
-    'fonts:build',
-    'img:build'
+    'fonts:build'
 ]);
 
 gulp.task('watch', function () {
@@ -146,9 +131,6 @@ gulp.task('watch', function () {
     });
     watch([path.watch.fonts], function (event, cb) {
         gulp.start('fonts:build');
-    });
-    watch([path.watch.img], function (event, cb) {
-        gulp.start('img:build');
     });
 });
 

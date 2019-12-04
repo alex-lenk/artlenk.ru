@@ -16,10 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.*",
-    "normalize-css": "^4.*",
-    "bootstrap": "4.*",
-    "owlcarousel": "^1.3.2",
-    "font-awesome": "^4.*"
+    "jquery": "latest",
+    "normalize-css": "latest",
+    "bootstrap": "latest",
+    "font-awesome": "latest"
   }
 }
