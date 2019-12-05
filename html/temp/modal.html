@@ -1,0 +1,284 @@
+<!-- orderModal -->
+<div class="modal fade order-modal" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg aria-hidden="true" class="icon-close">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+            </button>
+
+            <h2 class="modal-title" id="orderModalLabel">Бриф</h2>
+
+            <div class="modal-body">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active" data-target="#orderModal-1" aria-controls="orderModal-1" role="tab"
+                        data-toggle="tab">
+                        Под бизнес
+                    </li>
+                    <li data-target="#orderModal-2" aria-controls="orderModal-2" role="tab" data-toggle="tab">
+                        Под инфо проекты
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <form action="#" role="tabpanel" class="tab-pane active" id="orderModal-1">
+                        <div class="form-group">
+                            <input type="text" class="form-control hide-placeholder" placeholder="Адрес сайта">
+                        </div>
+
+                        <div class="form-group form-error">
+                            <input type="email" class="form-control hide-placeholder" placeholder="Ваш Email">
+                            <span class="form-error-text">Некоректный Email адрес</span>
+                        </div>
+
+                        <div class="form-group under-core">
+                            <div class="under-core-label">Ядро под:</div>
+
+                            <div class="under-core-radio">
+                                <label class="radio-wrap">
+                                    <input type="radio" name="name" class="radio-custom">
+                                    <span class="radio-custom-view">SEO</span>
+                                </label>
+                                <label class="radio-wrap">
+                                    <input type="radio" name="name" class="radio-custom" checked>
+                                    <span class="radio-custom-view">Директ</span>
+                                </label>
+                                <label class="radio-wrap">
+                                    <input type="radio" name="name" class="radio-custom">
+                                    <span class="radio-custom-view">Оба</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control hide-placeholder"
+                                   placeholder="Регион сбора запросов">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control hide-placeholder"
+                                   placeholder="Пример нужных запросов:">
+                        </div>
+
+                        <div class="form-group under-core">
+                            <div class="under-core-label">Инфо запросы в блог?</div>
+                            <div class="under-core-radio">
+                                <label class="radio-wrap">
+                                    <input type="radio" name="name2" class="radio-custom">
+                                    <span class="radio-custom-view">Да</span>
+                                </label>
+                                <label class="radio-wrap">
+                                    <input type="radio" name="name2" class="radio-custom" checked>
+                                    <span class="radio-custom-view">Нет</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control hide-placeholder"
+                                   placeholder="Где вы узнали о моих услугах?">
+                        </div>
+
+                        <div class="modal-message error-block">
+                            <div class="modal-message-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="img/sprite.svg#close"></use>
+                                </svg>
+                            </div>
+                            <p class="modal-message-text">Ваша заявка не отправлена, проверьте правильно ли заполнены
+                                поля!</p>
+                        </div>
+
+                        <div class="modal-message message-successful">
+                            <div class="modal-message-icon">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="img/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <p class="modal-message-text">Спасибо, ваша заявка отправлена! Я свяжусь с вами в ближайшее
+                                время.</p>
+                        </div>
+
+                        <button type="button" class="btn btn-yellow"><span>Отправить</span></button>
+                    </form>
+
+                    <form action="#" role="tabpanel" class="tab-pane fade" id="orderModal-2">
+                        <div class="form-group">
+                            <input type="text" class="form-control hide-placeholder" placeholder="Адрес сайта">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control hide-placeholder" placeholder="Ваш Email">
+                        </div>
+
+                        <div class="form-group under-core">
+                            <div class="under-core-label">Нужно ли ТЗ копиратеру:</div>
+                            <div class="under-core-radio">
+                                <label class="radio-wrap">
+                                    <input type="radio" name="name2" class="radio-custom" checked>
+                                    <span class="radio-custom-view">Да</span>
+                                </label>
+                                <label class="radio-wrap">
+                                    <input type="radio" name="name2" class="radio-custom">
+                                    <span class="radio-custom-view">Нет</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control hide-placeholder"
+                                   placeholder="Пример нужных запросов:">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control hide-placeholder"
+                                   placeholder="Сколько ТЗ (групп) планируете заказать?">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control hide-placeholder"
+                                   placeholder="Где вы узнали о моих услугах?">
+                        </div>
+
+                        <button type="button" class="btn btn-yellow"><span>Отправить</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- orderModal2 -->
+<div class="modal fade order-modal" id="orderModal2" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg aria-hidden="true" class="icon-close">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+            </button>
+
+            <h2 class="modal-title" id="orderModalLabel2">Бриф</h2>
+
+            <form action="#" class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control hide-placeholder" placeholder="Адрес сайта">
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-control hide-placeholder" placeholder="Ваш Email">
+                </div>
+
+                <div class="form-group under-core">
+                    <div class="under-core-label">Ядро под:</div>
+                    <div class="under-core-radio">
+                        <label class="radio-wrap">
+                            <input type="radio" name="name" class="radio-custom">
+                            <span class="radio-custom-view">SEO</span>
+                        </label>
+                        <label class="radio-wrap">
+                            <input type="radio" name="name" class="radio-custom" checked>
+                            <span class="radio-custom-view">Директ</span>
+                        </label>
+                        <label class="radio-wrap">
+                            <input type="radio" name="name" class="radio-custom">
+                            <span class="radio-custom-view">Оба</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control hide-placeholder"
+                           placeholder="Регион сбора запросов">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control hide-placeholder"
+                           placeholder="Пример нужных запросов:">
+                </div>
+
+                <div class="form-group under-core">
+                    <div class="under-core-label">Инфо запросы в блог?</div>
+                    <div class="under-core-radio">
+                        <label class="radio-wrap">
+                            <input type="radio" name="name2" class="radio-custom">
+                            <span class="radio-custom-view">Да</span>
+                        </label>
+                        <label class="radio-wrap">
+                            <input type="radio" name="name2" class="radio-custom" checked>
+                            <span class="radio-custom-view">Нет</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control hide-placeholder"
+                           placeholder="Где вы узнали о моих услугах?">
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-yellow"><span>Отправить</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- orderModal3 -->
+<div class="modal fade order-modal" id="orderModal3" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel3">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <svg aria-hidden="true" class="icon-close">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+            </button>
+
+            <h2 class="modal-title" id="orderModalLabel3">Бриф</h2>
+
+            <form action="#" class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control hide-placeholder" placeholder="Адрес сайта">
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-control hide-placeholder" placeholder="Ваш Email">
+                </div>
+
+                <div class="form-group under-core">
+                    <div class="under-core-label">Нужно ли ТЗ копиратеру:</div>
+                    <div class="under-core-radio">
+                        <label class="radio-wrap">
+                            <input type="radio" name="name2" class="radio-custom" checked>
+                            <span class="radio-custom-view">Да</span>
+                        </label>
+                        <label class="radio-wrap">
+                            <input type="radio" name="name2" class="radio-custom">
+                            <span class="radio-custom-view">Нет</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control hide-placeholder"
+                           placeholder="Пример нужных запросов:">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control hide-placeholder"
+                           placeholder="Сколько ТЗ (групп) планируете заказать?">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control hide-placeholder"
+                           placeholder="Где вы узнали о моих услугах?">
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-yellow"><span>Отправить</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

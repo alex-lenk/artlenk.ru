@@ -1,0 +1,137 @@
+
+.stub {
+  height: 100%;
+  line-height: 1.2;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background: url("../img/bg-stub@2x.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stub-text {
+  padding: 70px 0 60px;
+  font-family: 'CeraGR-Light', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.stub-contacts {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  > ul {
+    margin-bottom: 0;
+    list-style: none;
+  }
+}
+
+.stub-info {
+  padding-left: 0;
+  font-size: 20px;
+  font-family: 'WorkSans-Light', sans-serif;
+  a {
+    text-decoration: none;
+  }
+  li {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    &::before {
+      width: 28px;
+      height: 1px;
+      margin-right: 19px;
+      margin-bottom: 3px;
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      background-color: #33ddfb;
+    }
+  }
+}
+
+.stub-social {
+  li {
+    display: inline-block;
+    vertical-align: top;
+    &:first-child {
+      margin-right: 40px;
+    }
+  }
+  a {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    z-index: 5;
+    display: block;
+    text-align: center;
+    &::before {
+      width: 100%;
+      height: 100%;
+      border: 3px solid #33ddfb;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      transform: rotateZ(45deg);
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      &::before {
+        border-color: #fff;
+      }
+      svg {
+        fill: #33ddfb;
+      }
+    }
+  }
+  svg {
+    fill: #fff;
+    transition: all 0.3s ease;
+  }
+  .icon-be {
+    width: 24px;
+    height: 24px;
+    margin-top: 12px;
+  }
+  .icon-fb {
+    width: 18px;
+    height: 18px;
+    margin-top: 14px;
+  }
+}
+
+@include from('m') {
+  .stub-text {
+    width: 600px;
+    font-size: 35px;
+  }
+  .stub-info {
+    padding-right: 55px;
+  }
+  .stub-social {
+    padding-top: 10px;
+    padding-left: 55px;
+  }
+}
+
+@include to('s') {
+  .stub {
+    padding: 15px;
+  }
+  .stub-text {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-size: 25px;
+  }
+  .stub-contacts {
+    flex-direction: column;
+  }
+  .stub-social {
+    margin-top: 40px;
+  }
+}

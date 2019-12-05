@@ -1,0 +1,53 @@
+.our-mission {
+  background: url(../img/bg/bg-ourmission.jpg) no-repeat top left;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 55;
+}
+
+.our-mission-list {
+  display: flex;
+  > li {
+    position: relative;
+    &:not(:first-child):not(:last-child) {
+      padding-top: 41px;
+      .decor-rhombus {
+        width: 122px;
+        height: 122px;
+        margin-left: -61px;
+        top: 0;
+        &::after {
+          width: 116px;
+          height: 116px;
+          margin-left: -58px;
+        }
+      }
+      .list-line {
+        padding-top: 90px;
+      }
+    }
+    &:first-child, &:last-child {
+      padding-top: 40px;
+      .decor-rhombus {
+        width: 90px;
+        height: 90px;
+        margin-left: -45px;
+        top: 17px;
+        &::after {
+          width: 84px;
+          height: 84px;
+          margin-left: -42px;
+        }
+      }
+      .list-line {
+        padding-top: 90px;
+      }
+    }
+  }
+}
+
+.decor-rhombus.active::before {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#232525', endColorstr='#0f5c80', GradientType=1);
+  -webkit-animation: backgroundChange 3s alternate-reverse infinite;
+  animation: backgroundChange 3s alternate-reverse infinite;
+}

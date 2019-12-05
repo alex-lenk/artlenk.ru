@@ -1,0 +1,86 @@
+@import "mixin";
+
+.hide-placeholder {
+  @include hidePlaceholder {
+    opacity: 1;
+    color: #a6a6a6;
+    font-size: 17px;
+    transition: opacity 0.3s ease;
+    @include CeraGRLight;
+  }
+
+  &:focus {
+    @include hidePlaceholder {
+      opacity: 0;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+  &::after {
+    width: 0;
+    height: 2px;
+    position: relative;
+    top: -2px;
+    display: block;
+    content: '';
+    border-bottom: 2px solid #33ddfb;
+    transition: all 0.3s ease;
+  }
+}
+
+.form-group-focus::after {
+  width: 100%;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0 10px 11px;
+  font-size: 17px;
+  color: #fff;
+  border: 0;
+  border-bottom: 1px solid rgba(#d2d2d2, .3);
+  background-color: transparent;
+  font-weight: normal;
+  display: block;
+  transition: all .3s ease;
+  @include CeraGRLight;
+}
+
+textarea.form-control {
+  height: 188px;
+  padding: 19px 47px 10px;
+  resize: none;
+  overflow: hidden;
+}
+
+.form-error:not(.field-filled) {
+  &::after {
+    border-bottom-color: #fa4b4b;
+  }
+  .hide-placeholder {
+    @include hidePlaceholder {
+      opacity: 0;
+    }
+  }
+  .form-control:focus + .form-error-text {
+    opacity: 0;
+  }
+}
+
+.form-error-text {
+  top: 1px;
+  left: 10px;
+  position: absolute;
+  font-size: 16px;
+  color: #fa4b4b;
+  pointer-events: none;
+  transition: all .3s ease;
+  @include CeraGRLight;
+}
+
+.field-filled .form-error-text {
+  opacity: 0;
+}

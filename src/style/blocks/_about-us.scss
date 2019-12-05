@@ -1,0 +1,25 @@
+.about-us-advantages {
+  padding-left: 0;
+  margin-bottom: 67px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us-advantages > li {
+  padding: 55px 0 50px;
+  position: relative;
+  @include CeraGRMedium;
+}
+
+.about-us-advantages-text {
+  position: relative;
+  z-index: 5;
+  color: #33ddfb;
+  font-size: 44px;
+  line-height: 1;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}

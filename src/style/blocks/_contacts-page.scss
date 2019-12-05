@@ -1,0 +1,137 @@
+.contacts-page {
+  padding-bottom: 80px;
+  display: flex;
+}
+
+.contacts-page-list {
+  color: #e6e6e6;
+  font-size: 20px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  @include CeraGRLight;
+  li {
+    min-width: 133px;
+    padding-top: 160px;
+    position: relative;
+    text-align: center;
+  }
+  a {
+    color: #e6e6e6;
+  }
+}
+
+.decor-rhombus {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 23px;
+  left: 50%;
+  margin-left: -50px;
+  transform: rotateZ(45deg);
+  background: #0f5c80;
+  background: -moz-linear-gradient(-45deg, #0f5c80 0%, #232525 50%);
+  background: -webkit-linear-gradient(-45deg, #0f5c80 0%, #232525 50%);
+  background: linear-gradient(135deg, #0f5c80 0%, #232525 50%);
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f5c80', endColorstr='#232525', GradientType=0.5);
+}
+
+.decor-rhombus::before,
+.decor-rhombus::after {
+  content: '';
+  position: absolute;
+}
+
+.decor-rhombus::before {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 3;
+  background: #232525;
+  background: -moz-linear-gradient(-45deg, #232525 0%, #0f5c80 100%);
+  background: -webkit-linear-gradient(-45deg, #232525 0%, #0f5c80 100%);
+  background: linear-gradient(135deg, #232525 0%, #0f5c80 100%);
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#232525', endColorstr='#0f5c80', GradientType=1);
+  //animation: backgroundChange 3s alternate-reverse infinite;
+}
+
+.decor-rhombus::after {
+  width: 94px;
+  height: 94px;
+  top: 3px;
+  left: 50%;
+  margin-left: -47px;
+  background-color: #181a1b;
+  z-index: 5;
+}
+
+.decor-rhombus-text {
+  position: relative;
+  z-index: 5;
+  color: #33ddfb;
+  font-size: 44px;
+  line-height: 1;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  @include CeraGRMedium;
+}
+
+.contacts-page-right {
+  max-width: 56%;
+  max-height: 450px;
+  margin-left: auto;
+  position: relative;
+  flex-grow: 1;
+  &::before {
+    position: absolute;
+    top: 55px;
+    right: 40px;
+    border: 14px solid #232525;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: 3;
+  }
+  &::after {
+    position: absolute;
+    bottom: -55px;
+    left: -40px;
+    border: 14px solid #1b1d1e;
+    width: 195px;
+    height: 200px;
+    content: '';
+    z-index: 4;
+  }
+}
+
+#map-canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  position: relative;
+  z-index: 5;
+}
+
+.email, .phone, .skype, .address {
+  color: #33ddfb;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  @include CeraGRMedium;
+}
+
+.contacts-page-list-text {
+  width: 190px;
+  position: absolute;
+  left: 50%;
+  margin-left: -95px;
+  top: 71px;
+  @include CeraGRRegular;
+}

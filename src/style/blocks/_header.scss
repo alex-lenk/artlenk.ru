@@ -1,0 +1,171 @@
+.home-header {
+  width: 100%;
+  z-index: 55;
+  overflow: hidden;
+  background: url(../img/bg/bg-header.jpg) no-repeat top center #1b1d1e;
+}
+
+.home-header-inner {
+  width: 100%;
+  height: 100%;
+  padding-top: 37px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-down {
+  width: 1px;
+  height: 65px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  z-index: 92;
+  position: absolute;
+  overflow: hidden;
+  &::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: #3cc9e5;
+    animation: spin 1.5s 1000 linear;
+  }
+}
+
+.video-bg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  background-image: url(../img/bg/bg-header@2x.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.fullscreen-video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.header-panel {
+  width: 100%;
+  height: 50px;
+  padding: 0 95px;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-start;
+}
+
+.header-panel-sound {
+  display: flex;
+  align-items: center;
+}
+
+.linecol {
+  fill: #fff;
+}
+
+.volume-control {
+  width: 32px;
+  height: 26px;
+}
+
+.header-content {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+  display: flex;
+}
+
+.header-content-right {
+  height: 100%;
+  margin-left: auto;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-content-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.2;
+  @include CeraGRLight;
+}
+
+.header-content-media {
+  max-width: 340px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  position: relative;
+}
+
+.menu {
+  margin-bottom: -5px;
+  padding-left: 0;
+  list-style: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1;
+  display: flex;
+  justify-content: space-between;
+  @include CeraGRMedium;
+}
+
+.menu-link {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  transition: color 0.4s;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #3cc9e5;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.2s;
+  }
+  &::before {
+    top: -1rem;
+    transform-origin: 0 50%;
+  }
+  &::after {
+    bottom: -1rem;
+    transform-origin: 100% 50%;
+  }
+  &:hover {
+    color: #3cc9e5;
+    &::before, &::after {
+      transform: scale3d(1, 1, 1);
+      transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+      transition-duration: 0.4s;
+    }
+  }
+}

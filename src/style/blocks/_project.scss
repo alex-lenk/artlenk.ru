@@ -1,0 +1,300 @@
+.our-work {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: relative;
+  z-index: 50;
+}
+
+.project {
+  color: #fff;
+}
+
+.home .project .title-block {
+  padding-top: 65px;
+  img {
+    max-height: 98px;
+  }
+}
+
+.projects-list .project-content:last-of-type {
+  margin-bottom: 51px;
+}
+
+.project-content {
+  padding-top: 205px;
+  padding-bottom: 207px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 20;
+}
+
+.project-content-left {
+  position: relative;
+  z-index: 20;
+}
+
+.project-content-right {
+  width: 66%;
+  max-width: 864px;
+  padding: 41px 0 60px;
+  position: absolute;
+  z-index: 15;
+  right: 0;
+  top: 117px;
+  &::before, &::after {
+    content: '';
+    position: absolute;
+  }
+  &::before {
+    width: 100%;
+    height: 100%;
+    border: 14px solid #212324;
+    z-index: 3;
+    top: 0;
+    right: 64px;
+  }
+  &::after {
+    width: 321px;
+    height: 138px;
+    background-color: #1b1d1e;
+    z-index: 4;
+    bottom: 0;
+    left: -75px;
+  }
+}
+
+.project-title {
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: normal;
+  @include CeraGRMedium;
+  a {
+    color: #fff;
+  }
+}
+
+.project-text {
+  margin-bottom: 80px;
+  font-size: 18px;
+  line-height: 1.2;
+  @include CeraGRLight;
+}
+
+.project-content-media,
+.project-rectangle-decor {
+  transition: transform 0.3s ease-out;
+}
+
+.project-content-media {
+  position: relative;
+  z-index: 7;
+}
+
+.project-rectangle-decor {
+  width: 30%;
+  height: 71%;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  content: '';
+  z-index: 5;
+}
+
+.project-content-img {
+  display: block;
+  position: relative;
+  z-index: 50;
+  img {
+    box-shadow: 0 0 40px rgba(#000000, .3);
+  }
+}
+
+.project-rhombus {
+  width: 122px;
+  height: 122px;
+  position: absolute;
+  bottom: -80px;
+  z-index: 10;
+  left: -101px;
+  
+  &::before {
+    width: 1px;
+    height: 34px;
+    content: '';
+    position: absolute;
+    top: 65px;
+    left: 43px;
+    background-color: #33ddfb;
+    z-index: 9;
+  }
+  
+  .arrow {
+    width: 32px;
+    height: 32px;
+    fill: #33ddfb;
+    position: absolute;
+    bottom: -8px;
+    left: 27px;
+  }
+}
+
+.project-all-wrap {
+  width: 66.5%;
+  max-width: 864px;
+  margin-top: -55px;
+  margin-left: auto;
+  position: relative;
+}
+
+.project-all {
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  z-index: 10;
+  left: -125px;
+  font-size: 30px;
+  @include CeraGRMedium;
+  &::after {
+    width: 1px;
+    height: 50px;
+    margin: 20px auto 0;
+    display: block;
+    background-color: #33ddfb;
+    content: '';
+  }
+  &:hover {
+    color: #33ddfb;
+    .project-all-text {
+      transform: translate3d(0, 6px, 0);
+    }
+  }
+}
+
+.project-all-text {
+  display: inline-block;
+  transition: transform 0.4s;
+}
+
+.project-rhombus-text {
+  top: 21px;
+  left: 25px;
+  font-size: 30px;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 10;
+  @include CeraGRMedium;
+}
+
+.project-rhombus-decor {
+  width: 86px;
+  height: 86px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  transform: rotateZ(45deg);
+  content: '';
+  background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.86) 34%, rgba(#33ddfb, 0.65) 87%, rgba(#33ddfb, 0.6) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.86) 34%, rgba(#33ddfb, 0.65) 87%, rgba(#33ddfb, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.86) 34%, rgba(1, 128, 189, 0.65) 87%, rgba(1, 128, 189, 0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#33ddfb', GradientType=1);
+  &::after {
+    width: 82px;
+    height: 82px;
+    top: 2px;
+    background-color: #181a1b;
+    content: '';
+    position: absolute;
+    left: 2px;
+    z-index: 3;
+  }
+}
+
+/* rentpro */
+.project-rentpro .project-rectangle-decor {
+  background-color: $color-red;
+}
+
+.rentpro-car {
+  width: 73%;
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  margin-left: -36%;
+  z-index: 52;
+}
+
+.rentpro-logo {
+  width: 283px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 17px 0 0 -168px;
+  z-index: 54;
+}
+
+/* karma */
+.project-karma .project-rectangle-decor {
+  background-color: $color-light-blue;
+}
+
+.karma-messenger {
+  max-width: 264px;
+  max-height: 473px;
+  width: 100%;
+  height: 113%;
+  position: absolute;
+  z-index: 55;
+  top: -3%;
+  right: 6%;
+  img {
+    max-height: 100%;
+    box-shadow: 0 8px 25px rgba(#000000, .35);
+  }
+}
+
+/* gazmodel */
+.project-gazmodel .project-rectangle-decor {
+  background-color: #d42411;
+}
+
+.gazmodel-logo {
+  width: 35%;
+  height: 100%;
+  padding: 0 7%;
+  margin-top: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gazmodel-bg-logo {
+  width: 39.3%;
+  z-index: 51;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+/* locad */
+.project-locad .project-rectangle-decor {
+  background-color: #df5500;
+}
+
+.locad-logo {
+  max-width: 203px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 55;
+  top: 50%;
+  right: 50%;
+  margin: -11% -13% 0 0;
+}

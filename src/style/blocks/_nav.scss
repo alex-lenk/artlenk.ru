@@ -1,0 +1,274 @@
+.nav-panel {
+  height: 100%;
+  width: 586px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 95;
+  background: url(../img/bg/bg-nav.png) no-repeat center #3dc0ee;
+  background-size: cover;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+  
+  .social a:hover svg {
+    fill: #181a1b;
+  }
+  
+  .support-block {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+    .btn-white {
+      min-width: 200px;
+      height: 60px;
+      line-height: 58px;
+    }
+  }
+}
+
+.nav-panel-wrap {
+  height: 100%;
+  padding-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 1;
+  transition: transform 1s, opacity 1s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.nav-left_toggle::before {
+  content: '';
+  background-color: transparent;
+  width: 160rem;
+  height: 160rem;
+  position: absolute;
+  left: calc(100% + 521px);
+  top: 0;
+  display: none;
+  cursor: default;
+}
+
+.nav-panel-menu {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  font-size: 28px;
+  text-transform: uppercase;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include CeraGRMedium;
+  li {
+    padding-left: 85px;
+    position: relative;
+    align-self: flex-start;
+    &::before {
+      width: 43px;
+      height: 1px;
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 0;
+      background-color: #fff;
+      transition: width 0.3s;
+      transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    }
+    &:hover, &.active {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.nav-panel-open {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.8s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  
+  .support-block {
+    animation: showSocials .9s ease .3s forwards;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .nav-panel-menu li {
+    animation: fadeRight-menu 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    transition: all 650ms ease-in-out;
+  }
+  
+  .nav-panel-menu li:first-child {
+    animation-delay: 650ms;
+  }
+  
+  .nav-panel-menu li:nth-child(2) {
+    animation-delay: 800ms;
+  }
+  
+  .nav-panel-menu li:nth-child(3) {
+    animation-delay: 950ms;
+  }
+  
+  .nav-panel-menu li:last-child {
+    animation-delay: 1050ms;
+  }
+}
+
+.nav-left {
+  background-color: #141516;
+  z-index: 97;
+  transition: transform 0.6s;
+  transition-delay: 0.5s;
+  will-change: transform;
+  .panel-sound {
+    margin-top: auto;
+  }
+}
+
+.panel-sound {
+  position: relative;
+}
+
+.tcon-transform::before {
+  display: block;
+}
+
+$tcon-size: 32px !default;
+$tcon-transition: .3s !default;
+$tcon-jstransform: 'tcon-transform' !default;
+
+$tcon-menu-radius: ($tcon-size / 14) !default;
+$tcon-menu-color: #fff !default;
+$tcon-menu-arrowleft-transformation: (
+  transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 90deg)
+) !default;
+$tcon-menu-arrow360left-transformation: (
+  transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 360deg)
+) !default;
+.nav-left_toggle {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $tcon-size;
+  transition: $tcon-transition;
+  user-select: none;
+  width: $tcon-size;
+  background: transparent;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  
+  > * {
+    display: block;
+  }
+  
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+@mixin tcon-menu-lines {
+  display: inline-block;
+  height: 2px;
+  width: $tcon-size;
+  transition: $tcon-transition;
+  background: $tcon-menu-color;
+}
+
+.tcon-menu__lines {
+  @include tcon-menu-lines;
+  position: relative;
+  
+  &::before,
+  &::after {
+    @include tcon-menu-lines;
+    content: '';
+    position: absolute;
+    left: 0;
+    transform-origin: ($tcon-size / 14) center;
+    width: 100%;
+  }
+  
+  &::before {
+    top: 8px;
+  }
+  
+  &::after {
+    top: -8px;
+  }
+  
+  .#{$tcon-jstransform} & {
+    transform: scale3d(.8, .8, .8);
+  }
+}
+
+.nav-left_toggle {
+  width: auto;
+  
+  .tcon-menu__lines {
+    &::before,
+    &::after {
+      transform-origin: 50% 50%;
+      transition: top .3s .6s ease, transform .3s ease;
+    }
+  }
+  
+  &.#{$tcon-jstransform} {
+    .tcon-menu__lines {
+      background: transparent;
+      
+      &::before,
+      &::after {
+        top: 0;
+        transition: top .3s ease, transform .3s .5s ease;
+        width: $tcon-size;
+      }
+      
+      &::before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+      
+      &::after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}
+
+.tcon-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}

@@ -1,0 +1,36 @@
+.loader {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 98;
+  position: fixed;
+  background-color: #1b1d1e;
+  border: 20px solid #1e2122;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-line {
+  width: 0;
+  height: 8px;
+  left: 0;
+  top: 0;
+  background-color: #3dc0ee;
+  position: absolute;
+  transition: width 0.5s ease;
+}
+
+.loader-logo {
+  width: 194px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+.loader-percent {
+  font-size: 70px;
+  color: #e6e6e6;
+  @include CeraGRRegular;
+}
