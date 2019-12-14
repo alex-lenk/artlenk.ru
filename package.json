@@ -1,33 +1,39 @@
 {
-  "name": "frontend",
-  "version": "1.1",
-  "description": "Gulp frontend",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alex-lenk/"
-  },
-  "author": "Alex Lenk",
-  "license": "MIT",
-  "devDependencies": {
-    "bower-installer": "^1.2.0",
-    "browser-sync": "^2.13.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-clean-css": "^2.0.10",
-    "gulp-newer": "^1.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-rigger": "^0.5.8",
-    "gulp-rimraf": "^0.2.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.4",
-    "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.8",
-    "gulp-zip": "^3.2.0"
-  }
+	"name": "artlenk",
+	"version": "2.0.0",
+	"description": "My site",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Alex Lenk",
+	"license": "ISC",
+	"devDependencies": {
+		"del": "^5.1.0",
+		"browser-sync": "^2.26.7",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-clean-css": "^4.2.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-image-resize": "^0.13.1",
+		"gulp-imagemin": "^6.2.0",
+		"gulp-notify": "^3.2.0",
+		"gulp-rename": "^1.4.0",
+		"gulp-rigger": "^0.5.8",
+		"gulp-rsync": "0.0.8",
+		"gulp-sass": "^4.0.2",
+		"gulp-uglify": "^3.0.2",
+		"gulp-util": "^3.0.8",
+		"jquery": "^3.4.1",
+		"slick-slider": "^1.8.2",
+		"bootstrap": "^4.4.1",
+		"jquery-zoom": "^1.7.21",
+		"@fancyapps/fancybox": "^3.5.7"
+	},
+	"dependencies": {
+		"gulp-ex-file-include": "^2.0.2",
+		"gulp-path": "latest",
+		"gulp-svgmin": "latest",
+		"gulp-svgstore": "latest"
+	}
 }
