@@ -1,24 +1,57 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html lang="ru" class="no-scroll">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>AZRO studio</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
+    <title>ArtLenk.ru</title>
+    <meta name="description" content="ArtLenk is a creative digital production studio that specializes in web design, mobile applications, strategy and technical services.">
 
-<link rel="stylesheet" href="css/lib.min.css">
-<link rel="stylesheet" href="css/styles.min.css">
-<link rel="stylesheet" href="css/media.min.css">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
 
-<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
-<meta content="telephone=no" name="format-detection">
-<meta name="msapplication-tap-highlight" content="no">
+    <link rel="stylesheet" href="css/lib.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/media.min.css">
+    <link rel="stylesheet" href="css/ns-style-bar.min.css">
+    <link rel="stylesheet" href="css/ajax.min.css">
 
-<link rel="apple-touch-icon" sizes="180x180" href="img/touch/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/touch/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/touch/favicon-16x16.png">
-<link rel="manifest" href="img/touch/manifest.json">
-<link rel="mask-icon" href="img/touch/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="img/touch/favicon.ico">
-<meta name="msapplication-config" content="img/touch/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src='js/device.min.js'></script>
+</head>
+<body>
+<script>
+    (function () {
+        if (device.desktop()) {
+            var div = document.createElement('div');
+            div.className = 'loader';
+            div.setAttribute("id", "preloader");
+            div.innerHTML = '<div class="loader-line" style="width: 1%;"></div><div class="loader-logo"><picture>' +
+                '<source srcset="img/logo-preloader@2x.png"' +
+                ' media="(-webkit-min-device-pixel-ratio: 1.3),' +
+                '(min--moz-device-pixel-ratio: 1.3),' +
+                '(-o-min-device-pixel-ratio: 4/3),' +
+                '(min-device-pixel-ratio: 1.3),' +
+                '(min-resolution: 1.33dppx)">' +
+                '<img src="img/logo-preloader.png" alt="artlenk.ru" title="artlenk.ru">' +
+                ' </picture>' +
+                '</div>' +
+                '<div class="loader-percent"><span>5</span>%</div>';
+
+            var currentUrl = window.location.href;
+            //  if (isInCache(currentUrl) != "304") {
+            document.body.appendChild(div);
+            //  }
+        }
+    }());
+</script>

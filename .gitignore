@@ -5,6 +5,5 @@ idea
 materials
 design
 bootstrap
-old
 build/
-artlenk.ru.iml
+*.iml

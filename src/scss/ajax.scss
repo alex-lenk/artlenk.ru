@@ -1,0 +1,42 @@
+.columns {
+
+    min-height: 100%;
+    height: auto;
+  /*  -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;*/
+}
+
+.column {
+    min-height: 100%;
+    height: auto;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.zoom-in-sm {
+    animation-name: fade-in;
+}
+
+
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.zoom-out-sm {
+    animation-name: fade-out;
+}
+
+.t{
+    color: #0a0a0a;
+}

@@ -1,0 +1,134 @@
+$color-red: #f51c25;
+$color-light-blue: #2592c7;
+@import 'lib/breakpoint';
+@import 'lib/breakpoint-slicer';
+@import "common/mixin";
+@import "common/fonts";
+@import "common/btn";
+@import "common/form";
+@import "common/common";
+@import "common/animations";
+@import "blocks/header";
+@import "blocks/our-mission";
+@import "blocks/nav";
+@import "blocks/footer";
+@import "blocks/about-us";
+@import "blocks/who-we";
+@import "blocks/contacts-page";
+@import "blocks/project";
+@import "blocks/portfolio";
+@import "blocks/loader";
+@import "blocks/modal";
+//@import "blocks/slider";
+
+.no-position {
+  position: static;
+}
+
+.relative {
+  position: relative;
+}
+
+.interaction-block {
+  height: 860px;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  footer {
+    display: none;
+  }
+}
+
+.not-found-wrap {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.block-404 {
+  width: 380px;
+  margin: auto;
+  padding: 39px 0 46px;
+  display: inline-block;
+  position: relative;
+  transform: translateY(-100px);
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 5%;
+    transition: all .3s ease;
+  }
+  &::before {
+    width: 87%;
+    height: 100%;
+    border: 8px solid #232525;
+  }
+  &::after {
+    width: 102px;
+    height: 53px;
+    background-color: #1b1d1e;
+  }
+}
+
+.title-404 {
+  margin-bottom: 25px;
+  font-size: 44px;
+  color: #33ddfb;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 5;
+  @include CeraGRMedium;
+}
+
+.text-404 {
+  font-size: 21px;
+  color: #fff;
+  text-align: right;
+  @include CeraGRLight;
+  position: relative;
+  z-index: 5;
+}
+
+.box-result-project {
+  position: relative;
+}
+
+.result-project {
+  display: none;
+  cursor: move;
+}
+
+.result-project.active {
+  display: block;
+}
+
+.result-project.scrolling {
+  overflow: scroll;
+}
+
+.result-touch.active {
+  z-index: 5;
+}
+
+.iScrollVerticalScrollbar {
+  position: absolute;
+  z-index: 9999;
+  width: 4px;
+  bottom: 50px;
+  top: 50px;
+  right: 13px;
+  overflow: hidden;
+  background-color: #141516;
+  
+}
+
+.iScrollIndicator {
+  position: absolute;
+  background: #3dc0ee;
+  width: 100%;
+  cursor: default;
+}
